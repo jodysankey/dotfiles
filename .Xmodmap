@@ -1,0 +1,3 @@
+! Remap capslock to escape, removing existing binding first
+clear Lock
+keycode 0x42 = Escape
