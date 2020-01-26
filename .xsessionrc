@@ -1,0 +1,7 @@
+# Simply begin the key mapping activity, configured as in ~/.xbindkeysrc
+# Comment out in 14.04 since xbindkeys is already running
+#xbindkeys
+
+# However in 14.04 xmodmap does not run
+xmodmap ~/.Xmodmap
+

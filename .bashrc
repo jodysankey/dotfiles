@@ -6,12 +6,8 @@
 [ -z "$PS1" ] && return
 
 
-
 # JMS customization
 # =================
-
-# Set more restricitve than default UMASK
-umask 027
 
 # Run in VI mode
 set -o vi
@@ -30,25 +26,6 @@ HISTCONTROL=ignoredups:ignorespace
 
 # append to the history file, don't overwrite it
 shopt -s histappend
-
-
-
-# Environment variables
-# =====================
-
-EDITOR="/usr/bin/vim"
-SVN_EDITOR="/usr/bin/vim"
-
-if [ -f /usr/local/bin/arduino/arduino-1.0.5/hardware/tools/avr/bin ]; then
-  PATH="$PATH:/usr/local/bin/arduino/arduino-1.0.5/hardware/tools/avr/bin"
-fi
-if [ -f /home/jody/files/code/reuse/python/trunk/src ]; then
-  PYTHONPATH=/home/jody/files/code/reuse/python/trunk/src/:$PYTHONPATH
-fi
-export SITEPATH="/home/systems/site"
-export PATH="$PATH:/usr/local/bin/arduino/arduino-1.0.5/hardware/tools/avr/bin:/home/jody/bin/node-v8.11.3-linux-x64/bin/"
-export PYTHONPATH="$PYTHONPATH:/usr/local/scripts/pythonpath"
-
 
 
 # Standard stuff
@@ -118,20 +95,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -lF'
-alias la='ls -A'
-#alias l='ls -CF'
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias tmux='TERM=xterm-256color tmux'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -143,9 +110,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/jody/bin/google-cloud-sdk/path.bash.inc' ]; then source '/home/jody/bin/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/home/jody/bin/google-cloud-sdk/path.bash.inc' ]; then
+    source '/home/jody/bin/google-cloud-sdk/path.bash.inc'
+fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/jody/bin/google-cloud-sdk/completion.bash.inc' ]; then source '/home/jody/bin/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/home/jody/bin/google-cloud-sdk/completion.bash.inc' ]; then
+    source '/home/jody/bin/google-cloud-sdk/completion.bash.inc'
+fi
