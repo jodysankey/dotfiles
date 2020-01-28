@@ -17,6 +17,9 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Extend PATH with additional directories if they exist.
+if [ -d "$HOME/files/code/scripts/private" ]; then
+  PATH="$HOME/files/code/scripts/private:$PATH"
+fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
@@ -31,4 +34,6 @@ export PYTHONPATH="/usr/local/scripts/pythonpath"
 export SITEPATH="/home/systems/site"
 export EDITOR="/usr/bin/vim"
 export SVN_EDITOR="/usr/bin/vim"
+
+export SCANNER_URL="io:/net/HP_Officejet_Pro_276dw_MFP?ip=192.168.0.230" 
 
