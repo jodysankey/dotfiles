@@ -11,6 +11,6 @@ see anything thats obviously wrong or missing let me know.
 Checkout with `git clone https://github.com/jodysankey/dotfiles.git`
 
 I use the `stitch_dotfiles` script in my
-[scripts repo](https://github.com/jodysankey/dotfiles.git) to automatically
+[scripts repo](https://github.com/jodysankey/scripts.git) to automatically
 clone the repo and link files in my home directory to the corresponding file
 in the clone directory.
