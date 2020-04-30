@@ -17,17 +17,14 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Extend PATH with additional directories if they exist.
-if [ -d "$HOME/files/code/scripts/private" ]; then
-  PATH="$HOME/files/code/scripts/private:$PATH"
-fi
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin:$PATH"
 fi
 if [ -f /usr/local/bin/arduino/arduino-1.0.5/hardware/tools/avr/bin ]; then
-  PATH="$PATH:/usr/local/bin/arduino/arduino-1.0.5/hardware/tools/avr/bin"
+  export PATH="$PATH:/usr/local/bin/arduino/arduino-1.0.5/hardware/tools/avr/bin"
 fi
 if [ -f /home/jody/bin/node-v8.11.3-linux-x64/bin/ ]; then
-  PATH="$PATH:/home/jody/bin/node-v8.11.3-linux-x64/bin/"
+  export PATH="$PATH:/home/jody/bin/node-v8.11.3-linux-x64/bin/"
 fi
 
 export PYTHONPATH="/usr/local/scripts/pythonpath"
@@ -35,5 +32,5 @@ export SITEPATH="/home/systems/site"
 export EDITOR="/usr/bin/vim"
 export SVN_EDITOR="/usr/bin/vim"
 
-export SCANNER_URL="io:/net/HP_Officejet_Pro_276dw_MFP?ip=192.168.0.230" 
+export SCANNER_URL="hpaio:/net/HP_Officejet_Pro_276dw_MFP?ip=192.168.0.230" 
 
