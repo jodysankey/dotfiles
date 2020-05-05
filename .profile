@@ -20,6 +20,9 @@ fi
 if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
 fi
+if [ -d "$HOME/files/code/scripts/private" ] ; then
+    export PATH="$HOME/files/code/scripts/private:$PATH"
+fi
 if [ -f /usr/local/bin/arduino/arduino-1.0.5/hardware/tools/avr/bin ]; then
   export PATH="$PATH:/usr/local/bin/arduino/arduino-1.0.5/hardware/tools/avr/bin"
 fi
@@ -27,10 +30,12 @@ if [ -f /home/jody/bin/node-v8.11.3-linux-x64/bin/ ]; then
   export PATH="$PATH:/home/jody/bin/node-v8.11.3-linux-x64/bin/"
 fi
 
-export PYTHONPATH="/usr/local/scripts/pythonpath"
-export SITEPATH="/home/systems/site"
+# Should be set in /etc/environment
+#export PYTHONPATH="/usr/local/scripts/pythonpath"
+#export SITEPATH="/home/systems/site"
+#export SCANNER_URL="hpaio:/net/HP_Officejet_Pro_276dw_MFP?ip=192.168.0.230" 
+
 export EDITOR="/usr/bin/vim"
 export SVN_EDITOR="/usr/bin/vim"
 
-export SCANNER_URL="hpaio:/net/HP_Officejet_Pro_276dw_MFP?ip=192.168.0.230" 
 
