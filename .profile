@@ -29,11 +29,11 @@ fi
 if [ -f /home/jody/bin/node-v8.11.3-linux-x64/bin/ ]; then
   export PATH="$PATH:/home/jody/bin/node-v8.11.3-linux-x64/bin/"
 fi
+if [ -f /home/jody/bin/flutter/bin/ ]; then
+  export PATH="$PATH:/home/jody/bin/flutter/bin/"
+fi
 
-# Should be set in /etc/environment
-#export PYTHONPATH="/usr/local/scripts/pythonpath"
-#export SITEPATH="/home/systems/site"
-#export SCANNER_URL="hpaio:/net/HP_Officejet_Pro_276dw_MFP?ip=192.168.0.230" 
+# PYTHONPATH, SITEPATH, and SCANNER_URL should be set in /etc/environment
 
 export EDITOR="/usr/bin/vim"
 export SVN_EDITOR="/usr/bin/vim"

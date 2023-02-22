@@ -3,3 +3,5 @@
 	name = Jody Sankey
 [push]
 	default = matching
+[http]
+	cookiefile = /home/jody/.gitcookies
