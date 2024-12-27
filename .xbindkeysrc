@@ -53,11 +53,13 @@
 #       m:0x0 + b:12
 
 # Logitech MX Master 3S 
+# Thumb button
 "xte 'keydown Control_L' 'key F9' 'keyup Control_L'"
        m:0x0 + b:10
-"xte 'keydown Control_L' 'key F10' 'keyup Control_L'"
-       m:0x0 + b:7
+# Side wheel down
 "xte 'keydown Control_L' 'key F11' 'keyup Control_L'"
+       m:0x0 + b:7
+"xte 'keydown Control_L' 'key F12' 'keyup Control_L'"
        m:0x0 + b:6
 
 
