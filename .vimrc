@@ -47,6 +47,13 @@ let MRU_Use_Current_Window = 1
 
 
 
+" Markdown highlighting control (built in to vim now)
+" See available styles with :help hightlight-groups
+hi link markdownCode Question
+hi link markdownItalic MoreMsg
+hi link markdownBold ModeMsg
+
+
 "KEYBOARD MAPPING
 "----------------
 
@@ -54,10 +61,10 @@ let MRU_Use_Current_Window = 1
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 "Keypad operators control size of current window
-map <kPlus> <C-W>+
-map <kMinus> <C-W>-
-map <kDivide> <C-W><
-map <kMultiply> <C-W>>
+"map <kPlus> <C-W>+
+"map <kMinus> <C-W>-
+"map <kDivide> <C-W><
+"map <kMultiply> <C-W>>
 
 "Keypad period goes to BOF / typed line number
 map <kPoint> G
@@ -71,14 +78,14 @@ inoremap <F3> <C-X><C-P>
 "F4 = Correct next spelling
 map <F4> ]sz=
 
-"F5 = Next ========= separated section
-map <silent> <F5> :set nowrapscan/=\+\n:noh:set wrapscanzt
+"F6 = Previous markdown heading
+map <silent> <F6> :set nowrapscan?^#\+\s:noh:set wrapscanzt
+"F7 = Next mearkdown heading
+map <silent> <F7> :set nowrapscan/^#\+\s:noh:set wrapscanzt
+"map <silent> <F7> :set nowrapscan?=\+\n:noh:set wrapscanzt
 
-"F6 = Previous ========= separated section
-map <silent> <F6> :set nowrapscan?=\+\n:noh:set wrapscanzt
-
-"F7 = Save and Make
-map <F7> :w:make
+"F8 = Save and Make
+"map <F7> :w:make
 
 "F9 = Fold/unfold/make visual fold
 inoremap <F9> <C-O>za
