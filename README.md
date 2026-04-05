@@ -14,3 +14,9 @@ I use the `stitch_dotfiles` script in my
 [scripts repo](https://github.com/jodysankey/scripts.git) to automatically
 clone the repo and link files in my home directory to the corresponding file
 in the clone directory.
+
+## Additional links
+
+Some files need a manual symlink to deep in an application structure:
+
+* `ln -s ~/git-dotfiles/vscode_settings.json ~/.config/Code/User/settings.json`

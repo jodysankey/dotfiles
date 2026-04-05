@@ -1,0 +1,29 @@
+{
+    "keyboard.dispatch": "keyCode",
+    "cSpell.userWords": [
+        "meristematic"
+    ],
+    "markdown.styles": [
+        "./vscodestyle.css",
+        "~/files/notes/vscodestyle.css"
+    ],
+    "editor.tokenColorCustomizations": {
+       "textMateRules": [
+        {
+            "scope": "markup.bold.markdown",
+            "settings": {
+                "foreground": "#F08080",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": "markup.italic.markdown",
+            "settings": {
+                "foreground": "#90EE90",
+                "fontStyle": "italic"
+            }
+        }
+ 
+    ]
+    }
+}
