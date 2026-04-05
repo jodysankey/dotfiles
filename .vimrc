@@ -1,6 +1,3 @@
-set nocompatible
-
-
 "APPEARANCE
 "----------
 
@@ -18,13 +15,16 @@ hi StatusLine term=reverse ctermbg=17 ctermfg=White
 au InsertEnter * hi StatusLine term=reverse ctermbg=DarkRed ctermfg=Yellow 
 au InsertLeave * hi StatusLine term=reverse ctermbg=17 ctermfg=White 
 
+" Colorcolumn by filetype.
+autocmd FileType md,markdown  setlocal cc=100
+
 "Uncomment these to highline cursor line
 "set cursorline
 "autocmd InsertEnter * highlight  CursorLine ctermbg=DarkGrey ctermfg=Red
 "autocmd InsertLeave * highlight  CursorLine ctermbg=Black ctermfg=None
 
 "Set GUI specific options
-"set guifont=Courier\ New:h11
+set guifont=Monospace\ Bold\ 12
 set guioptions=egmrL
 
 
@@ -42,9 +42,9 @@ set nobackup
 set ruler
 set number
 
+
 "Plugin options
 let MRU_Use_Current_Window = 1
-
 
 
 " Markdown highlighting control (built in to vim now)
@@ -60,27 +60,19 @@ hi link markdownBold ModeMsg
 "Space disables the current search
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-"Keypad operators control size of current window
-"map <kPlus> <C-W>+
-"map <kMinus> <C-W>-
-"map <kDivide> <C-W><
-"map <kMultiply> <C-W>>
-
-"Keypad period goes to BOF / typed line number
-map <kPoint> G
-
 "F1 = Yank whole document
 map <F1> :%y+
 
 "F3 = Autocomplete from existing text
 inoremap <F3> <C-X><C-P>
-
 "F4 = Correct next spelling
 map <F4> ]sz=
+"F5 = Toggle spelling on/off
+map <F5> :call ToggleSpell()<CR>
 
 "F6 = Previous markdown heading
 map <silent> <F6> :set nowrapscan?^#\+\s:noh:set wrapscanzt
-"F7 = Next mearkdown heading
+"F7 = Next markdown heading
 map <silent> <F7> :set nowrapscan/^#\+\s:noh:set wrapscanzt
 "map <silent> <F7> :set nowrapscan?=\+\n:noh:set wrapscanzt
 
