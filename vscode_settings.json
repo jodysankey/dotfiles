@@ -1,5 +1,19 @@
 {
     "keyboard.dispatch": "keyCode",
+    "redhat.telemetry.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.rulers": [100]
+    },
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.rulers": [100]
+    },
+    "dart.flutterSdkPath": "/home/jody/bin/flutter",
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": true,
     "cSpell.userWords": [
         "meristematic"
     ],
